@@ -1,1 +1,0 @@
-# vista1nik.com

@@ -1,37 +1,19 @@
 {
   "name": "vista1nik",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "vista1nik",
+  "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "concurrently \"tailwindcss -i ./template/public/tailwind.css -o ./template/public/style.css --watch\" \"listok serve\"",
+    "build": "listok build && rm ./out/public/tailwind.css && tailwindcss -i ./template/public/tailwind.css -o ./out/public/style.css"
   },
   "dependencies": {
-    "@prisma/client": "3.13.0",
-    "@tailwindcss/typography": "^0.5.2",
-    "contentlayer": "^0.2.4",
-    "date-fns": "^2.28.0",
-    "next": "12.1.5",
-    "next-contentlayer": "^0.2.4",
-    "next-themes": "^0.1.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "reading-time": "^1.5.0",
-    "rehype-autolink-headings": "^6.1.1",
-    "rehype-code-titles": "^1.0.3",
-    "rehype-prism-plus": "^1.3.2",
-    "rehype-slug": "^5.0.1",
-    "remark-gfm": "^3.0.1"
+    "listok": "^1.0.6"
   },
   "devDependencies": {
-    "@primer/primitives": "^7.8.2",
-    "autoprefixer": "^10.4.5",
-    "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5",
-    "postcss": "^8.4.12",
-    "prisma": "3.13.0",
-    "tailwindcss": "^3.0.24"
+    "@tailwindcss/typography": "^0.5.2",
+    "concurrently": "^7.2.2",
+    "tailwindcss": "^3.1.4"
   }
 }

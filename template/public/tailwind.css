@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bitstream Vera Sans Mono'), url('/public/fonts/VeraMono.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Bitstream Vera Sans Mono'), url('/public/fonts/VeraMono-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Bitstream Vera Sans Mono'), url('/public/fonts/VeraMono-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Bitstream Vera Sans Mono';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Bitstream Vera Sans Mono'), url('/public/fonts/VeraMono-Bold-Italic.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Menlo, "Bitstream Vera Sans Mono", monospace;
+    @apply bg-black;
+}
+
+::selection {
+    @apply bg-zinc-700
+}
+
+.prose a {
+    @apply border-b border-current transition no-underline text-zinc-500 hover:text-white
+}   

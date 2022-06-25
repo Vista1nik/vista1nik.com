@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%- include('/includes/meta.ejs', {
+            meta: {
+                title: typeof title !== 'undefined' ? title : 'vista1nik',
+                description: typeof description !== 'undefined' ? description : 'Software Engineer',
+                url: typeof url !== 'undefined' ? 'https://vista1nik.com' + url : 'https://vista1nik.com',
+                type: typeof type !== 'undefined' ? type : 'website',
+                image: typeof image !== 'undefined' ? image : 'https://vista1nik.com/public/banner.png',
+                date: typeof date !== 'undefined' ? date : false
+            }
+        }) %> 
+        <link rel="stylesheet" href="/public/style.css">
+        <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="max-w-3xl mx-auto">
+            <%- include('/includes/header.ejs', {
+                breadcrumb: typeof breadcrumb !== 'undefined' ? breadcrumb : false
+            }) %>
+            <article class="prose prose-invert max-w-none">
+                <%- content %>
+            </article>
+            <%- include('/includes/footer.ejs') %> 
+        </div>
+    </body>
+</html>
